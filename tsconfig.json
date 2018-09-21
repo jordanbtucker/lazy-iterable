@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"lib": [
+			"es6"
+		],
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"outDir": "lib",
+		"sourceMap": true,
+		"strict": true,
+		"target": "es6"
+	},
+	"include": [
+		"src"
+	]
+}

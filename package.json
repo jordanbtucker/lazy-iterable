@@ -1,0 +1,50 @@
+{
+  "name": "lazy-iterable",
+  "version": "0.1.0",
+  "description": "An iterable object that lazily implements many Array.prototype members.",
+  "main": "lib/lazy-iterable.js",
+  "types": "lib/lazy-iterable.d.ts",
+  "files": [
+    "lib/",
+    "src/"
+  ],
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "coverage": "npm run build && npm run tap & tap --coverage-report=html",
+    "debug": "cross-env DEBUG=* npm start",
+    "lint": "npm run tslint && npm run eslint",
+    "tslint": "tslint --fix src/**",
+    "eslint": "eslint --fix .",
+    "preversion": "npm test",
+    "tap": "tap test -Rspec --cov --100",
+    "test": "npm run tslint && npm run build && npm run eslint && npm run tap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordanbtucker/lazy-iterable.git"
+  },
+  "author": "Jordan Tucker <jordanbtucker@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jordanbtucker/lazy-iterable/issues"
+  },
+  "homepage": "https://github.com/jordanbtucker/lazy-iterable#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.11.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.6.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "rimraf": "^2.6.2",
+    "tap": "^12.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  }
+}
