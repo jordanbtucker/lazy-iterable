@@ -69,4 +69,5 @@ well as a couple _in-place_ members in a read-only fashion.
 `reverse` and `sort` each return a new `LazyIterable` whereas `Array` performs
 the action in-place.
 
-For documentation see [lazy-iterable.d.ts](lib/lazy-iterable.d.ts).
+Read more in the [API
+Documentation](https://jordanbtucker.github.io/lazy-iterable/classes/_lazy_iterable_.lazyiterable.html).

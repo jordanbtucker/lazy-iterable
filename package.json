@@ -15,10 +15,11 @@
     "build": "rimraf lib && tsc",
     "coverage": "npm run build && npm run tap & tap --coverage-report=html",
     "debug": "cross-env DEBUG=* npm start",
+    "docs": "rimraf docs && typedoc --out docs",
     "lint": "npm run tslint && npm run eslint",
     "tslint": "tslint --fix src/**",
     "eslint": "eslint --fix .",
-    "preversion": "npm test",
+    "preversion": "npm test && npm run docs",
     "tap": "tap test -Rspec --cov --100",
     "test": "npm run tslint && npm run build && npm run eslint && npm run tap"
   },
@@ -45,6 +46,7 @@
     "rimraf": "^2.6.2",
     "tap": "^12.0.1",
     "tslint": "^5.11.0",
+    "typedoc": "^0.12.0",
     "typescript": "^3.0.3"
   }
 }
