@@ -1,6 +1,6 @@
 {
   "name": "lazy-iterable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An iterable object that lazily implements many Array.prototype members.",
   "main": "lib/lazy-iterable.js",
   "types": "lib/lazy-iterable.d.ts",
