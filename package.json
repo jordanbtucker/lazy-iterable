@@ -15,7 +15,7 @@
     "build": "rimraf lib && tsc",
     "coverage": "npm run build && npm run tap & tap --coverage-report=html",
     "debug": "cross-env DEBUG=* npm start",
-    "docs": "rimraf docs && typedoc --out docs",
+    "docs": "rimraf docs && typedoc --mode file --out docs",
     "lint": "npm run tslint && npm run eslint",
     "tslint": "tslint --fix src/**",
     "eslint": "eslint --fix .",

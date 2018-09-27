@@ -70,4 +70,4 @@ well as a couple _in-place_ members in a read-only fashion.
 the action in-place.
 
 Read more in the [API
-Documentation](https://jordanbtucker.github.io/lazy-iterable/classes/_lazy_iterable_.lazyiterable.html).
+Documentation](https://jordanbtucker.github.io/lazy-iterable/classes/lazyiterable.html).
