@@ -110,7 +110,7 @@ class LazyIterable<T> implements Iterable<T> {
 	 * @param callback A predicate function to test each item against.
 	 * @param thisArg The value to use as `this` when executing `callback`.
 	 */
-	public every (callback: (value: T, index?: number, source?: LazyIterable<T>) => void, thisArg: any = this): boolean {
+	public every (callback: (value: T, index?: number, source?: LazyIterable<T>) => boolean, thisArg: any = this): boolean {
 		let index = 0
 		for (const value of this) {
 			if (!callback.call(thisArg, value, index++, this)) {
@@ -127,7 +127,7 @@ class LazyIterable<T> implements Iterable<T> {
 	 * @param callback A predicate function to test each item against.
 	 * @param thisArg The value to use as `this` when executing `callback`.
 	 */
-	public filter (callback: (value: T, index?: number, source?: LazyIterable<T>) => void, thisArg: any = this): LazyIterable<T> {
+	public filter (callback: (value: T, index?: number, source?: LazyIterable<T>) => boolean, thisArg: any = this): LazyIterable<T> {
 		const source = this
 		return new LazyIterable(function* () {
 			let index = 0
@@ -145,7 +145,7 @@ class LazyIterable<T> implements Iterable<T> {
 	 * @param callback A predicate function to test each item against.
 	 * @param thisArg The value to use as `this` when executing `callback`.
 	 */
-	public find (callback: (value: T, index?: number, source?: LazyIterable<T>) => void, thisArg: any = this): T | undefined {
+	public find (callback: (value: T, index?: number, source?: LazyIterable<T>) => boolean, thisArg: any = this): T | undefined {
 		let index = 0
 		for (const value of this) {
 			if (callback.call(thisArg, value, index++, this)) {
@@ -160,7 +160,7 @@ class LazyIterable<T> implements Iterable<T> {
 	 * @param callback A predicate function to test each item against.
 	 * @param thisArg The value to use as `this` when executing `callback`.
 	 */
-	public findIndex (callback: (value: T, index?: number, source?: LazyIterable<T>) => void, thisArg: any = this): number {
+	public findIndex (callback: (value: T, index?: number, source?: LazyIterable<T>) => boolean, thisArg: any = this): number {
 		let index = 0
 		for (const value of this) {
 			if (callback.call(thisArg, value, index, this)) {
